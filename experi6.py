@@ -82,18 +82,17 @@ def calcAS(f_child: str) -> str:
     res += toFloat(f_child, place, len(f_child)) if isPlus else -toFloat(f_child, place,len(f_child))
     return str(res);
 
-#formula : str = input("Please enter the formula: ");
-#print(calcMD(formula)[0])
-singleDebug : bool = False
 
+singleDebug : bool = False
 if singleDebug: 
     print(calcMain("(((3))*(3+2))"))
-    #calcMD("5*(2+3)")
 else:
     testFile = open("testcase.txt", "r")
     ansFile = open("anscase.txt","r")
     testCases = testFile.readlines()
     ansCases = ansFile.readlines()
+    testFile.close()
+    ansFile.close()
     ACCnt : int = 0
     for i in range(0,len(testCases)):
         result : int =0;
